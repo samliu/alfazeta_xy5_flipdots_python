@@ -18,6 +18,9 @@ separate 7x28 controllers.
 Please read `xy5_controller.py` comments for more details on how to configure
 the hardware or find your serial port.
 
+The library makes it easy to instantiate multiple XY5Driver classes to control
+more than one display at a time, but for now I only control a single display.
+
 ## Example usage
 
 ```bash
