@@ -26,6 +26,9 @@ clock_numbers = {
     "P": np.array([[1, 1, 1], [1, 0, 1], [1, 1, 1], [1, 0, 0]], dtype=np.int8),
 }
 
+# Set to True if you want the clock numbers to be black and the rest to be
+# white.
+INVERT = False
 
 if __name__ == "__main__":
     driver = XY5Driver()
@@ -59,6 +62,10 @@ if __name__ == "__main__":
         arr[8:12, 18:21] = clock_numbers[date_str[6]]
         # (22, 9), 4x5 letter M.
         arr[8:12, 22:27] = clock_numbers[date_str[7]]
+
+        if INVERT:
+          arr = abs(arr-1)
+
         driver.paint_14x28(arr)
 
         # Update every 1 second.

@@ -8,12 +8,15 @@ import time
 import numpy as np
 import scipy
 
+
 class GameOfLife(object):
     REFRESH_INTERVAL = 0.5  # Seconds.
     STARTING_DENSITY = 0.3
 
-    def __init__(self, starting_grid=None):
+    def __init__(self, starting_grid=None, invert=False):
         self.__reset_state(starting_grid)
+
+        self.invert = invert
 
         self.kernel = np.ones((3,3), dtype=np.int8)
         self.kernel[1][1] = 0
@@ -52,16 +55,20 @@ class GameOfLife(object):
 
         # Draw to the XY5.
         time.sleep(self.REFRESH_INTERVAL)
-        self.driver.paint_14x28(self.state)
+        if self.invert:
+            inverted_state = abs(self.state-1)
+            self.driver.paint_14x28(inverted_state)
+        else:
+            self.driver.paint_14x28(self.state)
 
-    def loop(self, max_steps):
+    def loop(self, max_steps_per_round):
         while True:
-            for i in range(0, max_steps):
+            for i in range(0, max_steps_per_round):
                 self.update_state()
             self.__reset_state()
 
 
 if __name__ == "__main__":
-    game_of_life = GameOfLife()
-    game_of_life.loop(max_steps=100)
+    game_of_life = GameOfLife(invert=False)
+    game_of_life.loop(max_steps_per_round=100)
 
