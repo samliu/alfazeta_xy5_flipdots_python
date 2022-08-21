@@ -41,6 +41,11 @@ Python packages:
 * numpy
 * pyserial
 
+For Game of Life Demo
+
+* scipy (for convolve2D)
+
+
 ## Installation
 
 If you're missing the python dependencies, you can install them using:
