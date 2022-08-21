@@ -14,6 +14,8 @@ separate 7x28 controllers.
   the top or bottom halves of the board. You can also have two simultaneous
   scrolling texts, but they will always only be as tall as the board
   horizontally divided (7 dots tall).
+* `game_of_life.py` - Conway's game of life implemented for the 14x28 board.
+* `clock.py` - a clock implemented for the 14x28 board.
 
 Please read `xy5_controller.py` comments for more details on how to configure
 the hardware or find your serial port.

@@ -118,5 +118,5 @@ class XY5TextScroller(object):
 if __name__ == "__main__":
     scroller = XY5TextScroller()
     scroller.scroll_text(
-        text_top="Hello              ",
-        text_bottom="                 World")
+        text_top="neon              ",
+        text_bottom="                      icon")
