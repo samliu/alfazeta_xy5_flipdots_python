@@ -29,7 +29,7 @@ clock_numbers = {
 # Set to True if you want the clock numbers to be black and the rest to be
 # white.
 INVERT = False
-SHOW_SECONDS = True
+SHOW_SECONDS = False
 
 if __name__ == "__main__":
     driver = XY5Driver()
@@ -37,10 +37,10 @@ if __name__ == "__main__":
     while True:
         arr = np.zeros([14, 28], dtype=np.int8)
 
-        date_str = datetime.now().strftime("%H:%M%p")
+        date_str = datetime.now().strftime("%I:%M%p")
         if SHOW_SECONDS:
           # With seconds.
-          date_str = datetime.now().strftime("%H:%M%S%p")
+          date_str = datetime.now().strftime("%I:%M%S%p")
 
         if date_str.startswith('00'):
             date_str = list(date_str)
