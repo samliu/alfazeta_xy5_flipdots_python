@@ -180,11 +180,11 @@ if __name__ == "__main__":
     arr = np.zeros([14, 28], dtype=np.int8)
     arr[0][0] = 1  # Pixel at the top left corner.
     arr[10][21] = 1  # Pixel 9 down, 20 over.
-    driver.paint_14x28(arr, 0)
+    driver.paint_14x28(arr)
 
     # Reset after 1 second.
     time.sleep(1)
 
     # This paints everything black.
     arr = np.zeros([14, 28], dtype=np.int8)
-    driver.paint_14x28(arr, 0)
+    driver.paint_14x28(arr)

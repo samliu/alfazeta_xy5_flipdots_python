@@ -9,7 +9,7 @@ import numpy as np
 import scipy
 
 class GameOfLife(object):
-    REFRESH_INTERVAL = 0.1  # Seconds.
+    REFRESH_INTERVAL = 0.5  # Seconds.
     STARTING_DENSITY = 0.3
 
     def __init__(self, starting_grid=None):
