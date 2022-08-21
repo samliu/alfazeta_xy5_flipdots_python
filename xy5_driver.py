@@ -27,11 +27,11 @@ SOFTWARE.
 The display is comprised of two 7x28 panels stacked on top of one another, for
 total resolution of 14x28.
 
-Your mental model will be clearer if you visualize each of the component 7x28
-panels at a time. We give 28 data bytes; each byte has 8 bits, 8x28 is more
-than enough for the 7x28 bits in a single panel.
+Each RS-485 packet controls one half of the 14x28 panel (either the upper or
+lower half). Each packet is 32 bytes, where 28 are data bytes; we only use the
+lower 7 bits in each data byte since there are 7x28 dots.
 
-Each 32-bit message sent along the serial port will have this structure:
+Each 32-byte message sent along the serial port will have this structure:
 
 * Header
   * 0x80 (128)
