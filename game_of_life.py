@@ -2,7 +2,7 @@
 
 https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 """
-from xy5_controller import XY5Driver
+from xy5_driver import XY5Driver
 
 import time
 import numpy as np

@@ -1,4 +1,4 @@
-from xy5_controller import XY5Driver
+from xy5_driver import XY5Driver
 
 import time
 

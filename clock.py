@@ -1,4 +1,4 @@
-from xy5_controller import XY5Driver
+from xy5_driver import XY5Driver
 from datetime import datetime
 import numpy as np
 import time

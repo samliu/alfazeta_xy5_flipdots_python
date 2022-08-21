@@ -6,7 +6,7 @@ using a serial connection on linux (e.g Raspbian, Ubuntu, etc).
 Specially this is written for the 14x28 displays that are controlled by two
 separate 7x28 controllers.
 
-* `xy5_controller.py` - library provides a class you can use to write a numpy
+* `xy5_driver.py` - library provides a class you can use to write a numpy
   array to. For example, if you write some code to convert an image to a 7x28 or
   14x28 numpy array, you can use this class to easily have it draw the image to
   the board.
@@ -17,7 +17,7 @@ separate 7x28 controllers.
 * `game_of_life.py` - Conway's game of life implemented for the 14x28 board.
 * `clock.py` - a clock implemented for the 14x28 board.
 
-Please read `xy5_controller.py` comments for more details on how to configure
+Please read `xy5_driver.py` comments for more details on how to configure
 the hardware or find your serial port.
 
 The library makes it easy to instantiate multiple XY5Driver classes to control

@@ -1,4 +1,4 @@
-"""xy5_controller.py
+"""xy5_driver.py
 
 This script controls an AlfaZeta XY5 Flipdot (flip-disc) display.
 
