@@ -3,6 +3,9 @@
 This repo provides code to display stuff on your AlfaZeta XY5 flip dot display
 using a serial connection on linux (e.g Raspbian, Ubuntu, etc).
 
+![my xy5 clock](https://github.com/samliu/alfazeta_xy5_flipdots_python/assets/135933/ab0eb861-0228-4e71-8c48-0d1e6da36b74)
+
+
 Specially this is written for the 14x28 displays that are controlled by two
 separate 7x28 controllers.
 
